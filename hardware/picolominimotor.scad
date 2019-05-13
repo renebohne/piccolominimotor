@@ -120,6 +120,8 @@ module gewicht100g()
 
 module arm()
 {
+    translate([-27/2+10/2-0.5,0,0])
+    {
     difference()
     {
         translate([0,-5.5,-19.5/2])cube([10,54,7.5],center=true);
@@ -127,7 +129,7 @@ module arm()
         translate([0,-27.5,-19.5/2]) rotate([0,90,0]) cylinder(r=2/2,h=40, center=true);
         translate([0,20,0]) rotate([0,90,0])gewicht100g();
     }
-    
+    }
     translate([0,20,0]) rotate([0,90,0]) difference()
    {
       cylinder(r=27/2, h=28,center=true);
@@ -136,7 +138,7 @@ module arm()
 }
 
 //translate([0,0,1.5/2+3]) PCB();
-translate([0,-35/2,1.5/2]) PCBmount();
+//translate([0,-35/2,1.5/2]) PCBmount();
 
 
 //translate([0,-27.5,0]) rotate(a=[0,0,0])  motorcase();
